@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task Manager 11</title>
+	<link rel="stylesheet" type="text/css" href="../../sidebar.css">
+	<link rel="stylesheet" type="text/css" href="../../table.css">
+	<link rel="stylesheet" type="text/css" href="../../input.css">
+	<link rel="stylesheet" type="text/css" href="./profile.css">
+	<style type="text/css">
+		#difficulty {
+			padding: 10px;
+			border: 2px solid gray;
+			box-sizing: border-box;
+			font-size: 15px;
+			text-align: center;
+			color: black;
+			background-color: white;
+			outline: none;
+		}
+	</style>
+
+</head>
+<body>
+
+	<div class="sidenav">
+		<a href="../managermenu.html">Home</a>
+		<a href="./inbox.html">Inbox</a>
+		<a href="../taskmanager.html">Task Manager</a>
+		<a href="../employeemanager.html">Employee Manager</a>
+		<a href="../timesheet.html">Timesheet</a>
+		<a href="../../login.html">Logout</a>
+	</div>
+
+	<h1 class="main">Sarah</h1>
+	<div class="main table">
+
+		<img id="pic" src="../../assets/profile.png" style="width: 250px;">
+		
+		<div id="incomplete">
+			<p>Completed Tasks</p>
+			<ul>
+				<li>Sweeping</li>
+				<li>Mopping</li>
+				<li>Dishes</li>
+				<li>Clean Tables</li>
+			</ul>
+		</div>
+
+		<div id="complete">
+			<p>Incomplete Tasks</p>
+			<ul>
+				<li>Helping Customers</li>
+				<li>Stocking</li>
+				<li>Prep</li>
+				<li>Scrub Bathroom</li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="main">
+		<table>
+			<tr>
+				<th>Employee #</th>
+				<td>1234</td>
+			</tr>
+
+			<tr>
+				<th>Time Employed</th>
+				<td>1 month</td>
+			</tr>
+
+			<tr>
+				<th>PTO Acrued</th>
+				<td>2 days</td>
+			</tr>
+		</table>
+		<div>
+			<button onclick="remove()" id="remove">Remove Employee</button>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		function remove() {
+			var des = confirm("Are you sure you want to delete this employee?");
+			if(des) {
+				alert("Employee deleted");
+				window.location.href="../employeemanager.html";
+			}
+		}
+	</script>
+
+</body>
+</html>
